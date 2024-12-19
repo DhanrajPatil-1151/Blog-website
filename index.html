@@ -3,70 +3,287 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
+    <meta name="description" content="A modern blog with engaging UI/UX by Dhanraj Ravindra Patil">
+    <title>Dhanraj Ravindra Patil - Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+ <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 3rem;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+nav a:hover,
+nav a.active{
+    color: bisque;
+    border-bottom: 3px solid bisque;
+}
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #ff0000;
+        border-bottom: 3px solid #ff0000;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+    nav.active{
+        display: block;
+    }
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #ff0000;
+    }
+}
+        /* FOOTER */
+        .footer {
+            background-color: #121212;
+            color: #cfcfcf;
+            padding: 4rem 10%;
+            text-align: left;
+            position: relative;
+        }
+        
+        .footer-container {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: white;
-            text-align: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 3rem;
         }
-
-        .container {
-            animation: fadeIn 1.5s ease-in-out;
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
         }
-
-        .heading {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .subheading {
-            font-size: 1.5rem;
+        
+        .footer-section h3 {
+            font-size: 2.5rem;
+            color: #ff0000;
             margin-bottom: 2rem;
         }
-
-        .loader {
-            width: 50px;
-            height: 50px;
-            border: 6px solid rgba(255, 255, 255, 0.3);
-            border-top: 6px solid white;
+        
+        .footer-section p, .footer-section ul li {
+            font-size: 1.6rem;
+            line-height: 1.8;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-section ul li a {
+            color: #cfcfcf;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #ff0000;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 3rem;
+            height: 3rem;
+            background-color: #121212;
+            border: 2px solid #ff0000;
             border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto;
+            color: #ff0000;
+            margin-right: 1rem;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: #ff0000;
+            color: #121212;
+            transform: scale(1.2);
+        }
+        
+        .footer-bottom {
+            margin-top: 2rem;
+            border-top: 1px solid #cfcfcf;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 1.4rem;
+            color: #cfcfcf;
+        }
+        
+        .footer-bottom p {
+            margin: 0;
+        }
+        
+        .contactFooter a{
+            color: #cfcfcf;
         }
 
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
+        /* Full-Page Image Section */
+.image-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-image: url('2147772355.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-    </style>
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.overlay h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    top: 8em;
+    position: relative;
+    color: peachpuff;
+}
+
+.overlay p {
+    font-size: 1.8rem;
+    max-width: 800px;
+    margin: 0 auto;
+    top: 16.5em;
+    color: maroon;
+    position: relative;
+}
+
+
+
+ </style>
 </head>
 <body>
-    <div class="container">
-        <div class="heading">Coming Soon</div>
-        <div class="subheading">We are working hard to bring something amazing for you!</div>
-        <div class="loader"></div>
-    </div>
+    <header>
+        <a href="#" class="logo">Blogs By Dhanraj</a>
+        <nav>
+            <a href="#home" class="active"> Home</a>
+            <a href="#info" >About</a>
+            <a href="#skills" >Blogs</a>
+            <a href="#contact" >Contact</a>
+        </nav>
+    </header>
+
+
+    <section class="image-section">
+        <div class="overlay">
+            <h1>Visit Blogs</h1>
+            <p>Explore a variety of articles and insights across different topics. Dive into the world of ideas, trends, and stories.</p>
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>Dhanraj Patil</h3>
+                <p>
+                    Hey, I'm Dhanraj Ravindra Patil. A passionate developer, designer, and entrepreneur.
+                    Follow me to stay updated with my latest projects and works.
+                </p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://github.com/DhanrajPatil-1151" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/whos.dhanrajjj/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/dhanrajpatil1151/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Blogs">Blogs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contactFooter">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Pune, Maharashtra, India</p>
+                <p><i class="fas fa-phone"></i> +91-8421597609</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:Shivrajpatil21517@gmail.com">Shivrajpatil21517@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Dhanraj Ravindra Patil | All Rights Reserved</p>
+        </div>
+    </footer>
+    
+
+    <script src="scripts.js"></script>
 </body>
 </html>
