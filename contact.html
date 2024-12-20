@@ -185,19 +185,187 @@ nav a.active{
         .about p{
             margin-bottom: 1em;
         }
-        /* Full-Page Image Section */
-.image-section {
+       
+        /* Contact Section */
+.contact {
+    text-align: center;
+    padding: 6rem 10%;
+    background: #000000;
+    border-radius: 2rem;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.7);
     position: relative;
     width: 100%;
     height: 100vh; /* Full viewport height */
-    background-image: url('2147772355.jpg'); /* Replace with your image URL */
+    background-image: url('2149139103.jpg'); /* Replace with your image URL */
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.contact form {
+    max-width: 700px;
+    margin: 3rem auto;
+    background: #121212;
+    padding: 4rem;
+    border-radius: 1.5rem;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.7);
+}
+.contact-info {
+    margin-top: 4rem;
+    font-size: 1.6rem;
+    color: #cfcfcf;
+}
+.contact-info a {
+    color: #b74b4b;
+    text-decoration: none;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+}
+.social-links a {
+    font-size: 2.5rem;
+    margin: 0 1rem;
+    color: #b74b4b;
+    transition: color 0.3s ease;
+}
+.social-links a:hover {
+    color: #a03333;
+}
 
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+.contact form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-details {
+    flex: 1;
+    min-width: 300px;
+    background: currentColor;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+.contact-details h3 {
+    font-size: 2.4rem;
+    color: #ff0000;
+    margin-bottom: 1rem;
+}
+
+.contact-details p {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-details i {
+    font-size: 2rem;
+    color: #b74b4b;
+}
+
+/* ///////// */
+/* Contact Section */
+.contact {
+    text-align: center;
+    
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    padding: 5rem 10%;
+}
+
+.contact-details {
+    flex: 1;
+    height: 16em;
+    text-align: left;
+}
+
+.contact-details h3 {
+    font-size: 2.5rem;
+    color: lightblue;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.contact-details p {
+    font-size: 1.8rem;
+    color: #cfcfcf;
+    margin: 1rem 0;
+}
+
+.contact-details i {
+    margin-right: 1rem;
+    color: lightblue;
+}
+
+.contact-details a {
+    color: #cfcfcf;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #b74b4b;
+}
+
+/* Social Media Section */
+.social-media {
+    flex: 1;
+    text-align: left;
+}
+
+.social-media h3 {
+    font-size: 2.5rem;
+    color: #b74b4b;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.social-media p {
+    font-size: 1.8rem;
+    color: #cfcfcf;
+    margin: 1rem 0;
+}
+
+.social-media a {
+    font-size: 3rem;
+    margin: 0 1rem;
+    color: #cfcfcf;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #b74b4b;
+}
+
+.social-media i {
+    transition: transform 0.3s ease;
+}
+
+.social-media a:hover i {
+    transform: scale(1.2);
+}
+.section-title{
+margin-top: 5em;
+    font-size: xx-large;
+}
 .overlay {
     position: absolute;
     top: 0;
@@ -210,25 +378,6 @@ nav a.active{
     padding: 20px;
 }
 
-.overlay h1 {
-    font-size: 4rem;
-    margin-bottom: 20px;
-    font-weight: 600;
-    top: 8em;
-    position: relative;
-    color: peachpuff;
-}
-
-.overlay p {
-    font-size: 1.8rem;
-    max-width: 800px;
-    margin: 0 auto;
-    top: 16.5em;
-    color: maroon;
-    position: relative;
-}
-
-
 
 
  </style>
@@ -237,21 +386,53 @@ nav a.active{
     <header>
         <a href="index.html" class="logo">Blogs By Dhanraj</a>
         <nav>
-            <a href="index.html" class="active"> Home</a>
+            <a href="index.html" > Home</a>
             <a href="about.html" >About</a>
             <a href="blogs.html" >Blogs</a>
-            <a href="contact.html" >Contact</a>
+            <a href="contact.html" class="active" >Contact</a>
         </nav>
     </header>
-
-
-    <section class="image-section">
+   
+    <section class="contact" id="contact">
         <div class="overlay">
-            <a href="Blogs.html"><h1>Visit Blogs</h1> </a>
-            <p>Explore a variety of articles and insights across different topics. Dive into the world of ideas, trends, and stories.</p>
-        </div>
-    </section>
+        <h2 class="section-title">Contact Me</h2>
     
+        <div class="contact-container">
+            <!-- Contact Details -->
+            <div class="contact-details">
+                <h3>Get in Touch</h3>
+                <p><i class="fas fa-envelope"></i> 
+                    <a href="mailto:Shivrajpatil21517@gmail.com">Shivrajpatil21517@gmail.com</a>
+                </p>
+                <p><i class="fas fa-phone"></i> 
+                    <a href="tel:+1234567890">+918421597609</a>
+                </p>
+                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="dhanrajpatil1151" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/dhanrajpatil1151?trk=profile-badge"></a></div>
+              
+            </div>
+    
+            <!-- Social Media Links -->
+            <div class="contact-details">
+                <h3>Follow Me</h3>
+                <p>
+                    <a href="https://www.linkedin.com/in/dhanrajpatil1151/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/whos.dhanrajjj/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com/DhanrajPatil-1151" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://wa.me/8421597609?text=urlencodedtext" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    </section>
+  
 
     <footer class="footer">
         <div class="footer-container">
