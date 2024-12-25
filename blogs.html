@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A modern blog with engaging UI/UX by Dhanraj Ravindra Patil">
+    <title>Dhanraj Ravindra Patil - Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+ <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 3rem;
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+nav a{
+    font-size: 1.8rem;
+    color: rgb(0, 0, 0);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+nav a:hover,
+nav a.active{
+    color: rgb(0, 0, 0);
+    border-bottom: 3px solid rgb(0, 0, 0);
+}
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #ff0000;
+        border-bottom: 3px solid #ff0000;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+    nav.active{
+        display: block;
+    }
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #ff0000;
+    }
+}
+        /* FOOTER */
+        .footer {
+            background-color: #121212;
+            color: #cfcfcf;
+            padding: 4rem 10%;
+            text-align: left;
+            position: relative;
+        }
+        
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-section h3 {
+            font-size: 2.5rem;
+            color: #ff0000;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section p, .footer-section ul li {
+            font-size: 1.6rem;
+            line-height: 1.8;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-section ul li a {
+            color: #cfcfcf;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #ff0000;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 3rem;
+            height: 3rem;
+            font-size: 2rem; /* Adjust icon size */
+
+            background-color: #121212;
+            border: 2px solid #ff0000;
+            border-radius: 50%;
+            color: #ff0000;
+            margin-right: 1rem;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: #ff0000;
+            color: #121212;
+            transform: scale(1.2);
+        }
+        
+        .footer-bottom {
+            margin-top: 2rem;
+            border-top: 1px solid #cfcfcf;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 1.4rem;
+            color: #cfcfcf;
+        }
+        
+        .footer-bottom p {
+            margin: 0;
+        }
+        
+        .contactFooter a{
+            color: #cfcfcf;
+        }
+        .about p{
+            margin-bottom: 1em;
+        }
+
+
+
+.container{
+   margin: 0 auto;
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   padding-left: 1.25rem;
+   padding-right: 1.25rem;
+   margin: 0 8em 0 8em;
+   align-items: center;
+   
+
+}
+.flexbox{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+
+   justify-content: space-between;
+
+
+}
+
+.blog-boxes{
+   width: 410px;
+   overflow: hidden;
+   background: #ffffff;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+
+
+}
+
+.blog-image{
+   position: relative;
+}
+.blog-image img{
+   width: 100%;
+   height: 250px;
+   object-fit: cover;
+}
+.blog-info{
+   padding: 1em;
+    display: flex;
+   flex-direction: column;
+}
+
+.blog-info h2{
+   font-size: 16px;
+   color: #777;
+   margin: 0 0 10px;
+}
+.blog-info h1{
+   font-size: 18px;
+   color: #000000;
+   
+   margin: 0 0 10px;
+}
+.blog-info a{
+  text-decoration: none;
+}
+.blog-info p{
+margin-top: 0;
+margin-bottom: 0;
+color: #a0aec0;
+font-size: small;
+padding-bottom: 21px;
+border-bottom: 1px solid #a0aec0;
+}
+
+.blog-footer{
+   display: flex;
+   flex-direction: row;
+   color: #718096;
+}
+
+.author-logo{
+   height: 40px;
+}
+
+.blog-footer{
+   padding-top: 15px;
+}
+
+.info-author{
+  
+   padding-left: 7px;
+
+}
+.info-date-time {
+   padding-left: 11em;
+   padding-top: 6px;
+}
+
+.author-posi{
+   font-size: 13px;
+}
+.info-date-time{
+   text-align: end;
+   font-size: larger;
+}
+
+.Blog-content{
+    position: relative;
+    top: 11em;
+    margin: 7em 7em 15em 7em;
+
+}
+.author{
+    font-size: 15px;
+}
+
+ </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Blogs By Dhanraj</a>
+        <nav>
+            <a href="index.html" class="active"> Home</a>
+            <a href="about.html" >About</a>
+            <a href="blogs.html" >Blogs</a>
+            <a href="contact.html" >Contact</a>
+        </nav>
+    </header>
+
+
+
+<section class="Blog-content">
+
+
+<div class="container">
+    <div class="flexbox">
+
+        <div class="blog-boxes">
+
+            <div class="blog-image">
+            <a class="img" href="Botblock.html"><img src="block-crawlers.webp" alt=""></a>
+            </div>
+
+            <div class="blog-info">
+
+                <h2>Frontend</h2>
+                <a href="#"> <h1>Block Google search bots from indexing your website.</h1></a>
+                <p>Prevent your website from appearing in Google search results by temporarily using the Google Search Console or permanently by modifying your robots.txt file. Learn how to block all crawler bots or specific bots and pages in this post.                    </p>
+                
+                <div class="blog-footer">
+                    <div class="author-image">
+                        <img class="author-logo" src="author.png" alt="">
+                    </div>
+                    <div class="info-author">
+                        <div class="author">Dhanraj Patil</div>
+                        <div class="author-posi">Developer</div>
+                    </div>
+                    <div class="info-date-time">
+                        <div class="read-time">
+                            5 min read
+                        </div>
+                        <div class="added-time">
+                            24 December 2024
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+       
+        </div>
+    </div>
+</section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>Dhanraj Patil</h3>
+                <p>
+                    Hey, I'm Dhanraj Ravindra Patil. A passionate developer, designer, and entrepreneur.
+                    Follow me to stay updated with my latest projects and works.
+                </p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://github.com/DhanrajPatil-1151" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/whos.dhanrajjj/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/dhanrajpatil1151/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contactFooter">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Pune, Maharashtra, India</p>
+                <p><i class="fas fa-phone"></i> +91-8421597609</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:Shivrajpatil21517@gmail.com">Shivrajpatil21517@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Dhanraj Ravindra Patil | All Rights Reserved</p>
+        </div>
+    </footer>
+    
+
+</body>
+</html>
