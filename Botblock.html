@@ -1,59 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Under Construction</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Primary Meta Tags -->
+<meta name="title" content="How to Block Google Search Bots | Temporary and Permanent Methods">
+<meta name="description" content="Learn how to block Google search bots from indexing your website using temporary and permanent methods like Google Search Console and robots.txt configuration.">
+<meta name="keywords" content="block Google search bots, block indexing, Google Search Console, robots.txt, temporary block, permanent block, web crawlers, SEO">
+<meta name="author" content="Blog by Dhanraj Ravindra Patil">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blogbydhanrajpatil.shopsage.co.in/">
+<meta property="og:title" content="How to Block Google Search Bots | Temporary and Permanent Methods">
+<meta property="og:description" content="Discover effective methods to block Google search bots using Google Search Console for temporary blocks or robots.txt for permanent blocking.">
+<meta property="og:image" content="https://blogbydhanrajpatil.shopsage.co.in/block-crawlers.webp">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://blogbydhanrajpatil.shopsage.co.in/">
+<meta property="twitter:title" content="How to Block Google Search Bots | Temporary and Permanent Methods">
+<meta property="twitter:description" content="Learn how to block Google search bots from indexing your website using Google Search Console or robots.txt.">
+<meta property="twitter:image" content="https://blogbydhanrajpatil.shopsage.co.in/block-crawlers.webp">
+
+<!-- Robots Meta -->
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://blogbydhanrajpatil.shopsage.co.in/">
+<!-- Structured Data Markup -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blogbydhanrajpatil.shopsage.co.in/"
+      },
+      "headline": "How to Block Google Search Bots | Blog by Dhanraj Ravindra Patil",
+      "description": "Learn how to block Google search bots from indexing your website. Explore temporary and permanent solutions with this detailed guide.",
+      "image": "https://blogbydhanrajpatil.shopsage.co.in/block-crawlers.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Dhanraj Ravindra Patil"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Blog by Dhanraj Ravindra Patil",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://blogbydhanrajpatil.shopsage.co.in/author.png"
         }
-        .construction-container {
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .construction-container img {
-            max-width: 200px;
-            margin-bottom: 20px;
-        }
-        .construction-container h1 {
-            font-size: 2em;
-            margin: 0;
-        }
-        .construction-container p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-        .construction-container a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .construction-container a:hover {
-            background-color: #0056b3;
-        }
-    </style>
+      },
+      "datePublished": "2024-12-26",
+      "dateModified": "2024-12-26"
+    }
+    </script>
+    
+  <title>Block Google Search Bots</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #F0F8FF;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #2C3E50;
+    }
+    a, button {
+      text-decoration: none;
+      color: #4682B4;
+      transition: color 0.3s ease, background 0.3s ease;
+      font-family: inherit;
+      cursor: pointer;
+    }
+    a:hover, button:hover {
+      color: #5A9BD5;
+    }
+    p, ul, li {
+      line-height: 1.8;
+      font-size: 16px;
+    }
+    code {
+      background: #E6F7FF;
+      color: #2C3E50;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    pre {
+      background: #4682B4;
+      color: #ffffff;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 14px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 40px 20px;
+      background: lightblue;
+      color: #2C3E50;
+      border-radius: 12px;
+    }
+    .hero h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+
+    /* Table of Contents */
+    .toc {
+      background: #FFFFFF;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      border-left: 5px solid lightblue;
+    }
+    .toc h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #2C3E50;
+    }
+    .toc ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .toc ul li {
+      margin: 10px 0;
+    }
+    .toc ul li a {
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    /* Section Styling */
+    section {
+      margin-bottom: 40px;
+      background: #FFFFFF;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-left: 5px solid lightblue;
+    }
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #2C3E50;
+    }
+    section ul {
+      margin-top: 10px;
+    }
+
+    /* Back Button */
+    .back-button {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background: lightblue;
+      color: #2C3E50;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .back-button:hover {
+      background: #5A9BD5;
+      color: #fff;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      background: #E6F7FF;
+      color: #333;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-    <div class="construction-container">
-        <img src="https://e7.pngegg.com/pngimages/400/846/png-clipart-under-construction-under-construction-thumbnail.png" alt="Under Construction">
-        <h1>Page Under Construction</h1>
-        <p>We are working hard to bring you this page. Stay tuned!</p>
-        <a href="blogs.html">Return to Home</a>
-    </div>
+
+<div class="container">
+  <button class="back-button" onclick="history.back()">← Go Back to Previous Page</button>
+
+  <div class="hero">
+    <h1>Block Google Search Bots</h1>
+    <p>Learn how to temporarily or permanently block Google bots from indexing your website.</p>
+  </div>
+
+  <div class="toc" id="toc"> 
+    <h2>Table of Contents</h2>
+    <ul>
+      <li><a href="#temporary-block-method">1. Temporary Block Method</a></li>
+      <li><a href="#permanent-block-method">2. Permanent Block Method</a></li>
+    </ul>
+  </div>
+
+  <section id="temporary-block-method">
+    <a href="#toc" class="back-button">← Back to Table of Contents</a>
+    <h2>1. Temporary Block Method</h2>
+    <p>You can use Google Search Console to temporarily block a website from being listed in Google search.</p>
+    <p>It is a very simple UI that accepts requests for blocking URL paths from your website. You have an option to block a single webpage or the whole website.</p>
+    <p>Webpage block or website block requests last only for 6 months. After that, your website will appear in Google search.</p>
+    <p>Blocking a URL does not prevent Google from crawling your page, only from showing it in search results.</p>
+  </section>
+
+  <section id="permanent-block-method">
+    <a href="#toc" class="back-button">← Back to Table of Contents</a>
+    <h2>2. Permanent Block Method</h2>
+    <p>You can disallow crawlers from indexing certain parts of your website or the whole website by modifying your <code>robots.txt</code> file.</p>
+    <p>The <code>robots.txt</code> file is used to communicate with web crawlers. This file should be kept in the root directory. You can configure this file to prevent crawlers from indexing webpages on your site.</p>
+    <p>Use cases for blocking crawlers include:</p>
+    <ul>
+      <li>Blocking indexing of certain parts of your website that have private information</li>
+      <li>Blocking indexing of a website in maintenance mode</li>
+      <li>Blocking indexing of web pages intended for internal or company use</li>
+    </ul>
+    <p>To block all crawler bots from indexing all pages on your website, the <code>robots.txt</code> file will look like this:</p>
+    <pre>
+User-agent: *
+Disallow: /
+    </pre>
+    <p>In the <code>User-agent</code> field, you can specify specific bots like Googlebot, Bingbot, etc.</p>
+    <p>In the <code>Disallow</code> field, you can add specific routes from your website like <code>/private/</code> or <code>/private/blocked-page.html</code>.</p>
+  </section>
+</div>
+
+<footer>
+  © 2024 Blog by Dhanraj Ravindra Patil . All rights reserved.
+</footer>
+
 </body>
 </html>
